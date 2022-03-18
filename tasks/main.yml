@@ -1,0 +1,21 @@
+---
+- name: 'HASHICORP: Add Apt Key'
+  apt_key:
+    url: https://apt.releases.hashicorp.com/gpg
+    state: present
+
+- name: 'HASHICORP: Add Repos'
+  apt_repository:
+    repo: deb [arch=amd64] https://apt.releases.hashicorp.com impish main
+    state: present
+    filename: hashicorp.list
+
+- name: 'HASHICORP: Install Pack'
+  apt:
+    name: '{{ packages }}'
+    state: present
+    update_cache: yes
+  vars:
+    packages:
+      - terraform
+      - vagrant
