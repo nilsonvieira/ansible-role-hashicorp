@@ -2,7 +2,7 @@
 Configure the `requirements.yml` file.
 ```
 - name: hashicorp
-  src: https://github.com/nilsonvieira/ansible-role-vscode
+  src: https://github.com/nilsonvieira/ansible-role-hashicorp
   version: main
 ```
 In the Roles include:

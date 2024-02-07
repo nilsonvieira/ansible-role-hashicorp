@@ -1,4 +1,4 @@
-- name: Add Apt Key HashCorp
+- name: Add Apt Key HashiCorp
   apt_key:
     url: https://apt.releases.hashicorp.com/gpg
     state: present
